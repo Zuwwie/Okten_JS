@@ -181,12 +181,10 @@ document.write(`<ul><li>${listOfItems[0]}</li><li>${listOfItems[1]}</li></ul>`);
 
 
 document.write(`<ul>`)
-for (let i=0;i<listOfItems.length;i++) {
+for (let i = 0; i < listOfItems.length; i++) {
     document.write(`<li>${listOfItems[i]}</li>`)
 }
 document.write(`</ul>`)
-
-
 
 
 // /*
@@ -240,10 +238,10 @@ let simpsons = [
 //     <img src="PHOTO" alt="">
 // </div>
 
-for (let i=0;i<simpsons.length;i++) {
+for (let i = 0; i < simpsons.length; i++) {
     document.write(`<div>`)
     document.write(`<h2 class="center">${simpsons[i].surname} ${simpsons[i].name}. ${simpsons[i].age}  - AGE</h2>`);
-    document.write(`<p>${simpsons[i].info}</p>`);
+    document.write(`<p>${simpsons[i].info} </p>`);
     document.write(`<img src="${simpsons[i].photo}" alt="photo simpsons">`)
     document.write(`</div>`)
 }
