@@ -1,0 +1,28 @@
+.wrap {
+    display: flex;
+    row-gap: 10px;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.post-card {
+    width: 18%;
+}
+
+.users-box {
+    box-sizing: border-box;
+    display: flex;
+    row-gap: 10px;
+    column-gap: 50px;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.user-block {
+    width: 40%;
+    text-align: center;
+}
+
+.address-block {
+    text-align: right;
+}
