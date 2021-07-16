@@ -174,7 +174,10 @@ let citiesWithId = [
 let usersWithCities = [];
 for (let i = 0; i < usersWithId.length; i++) {
     usersWithCities[i] = usersWithId[i]
-    usersWithCities[i].address = citiesWithId[i]
+    for (let j = 0; j < citiesWithId.length; j++) {
+        if(usersWithCities[i].id === citiesWithId[j].user_id)
+            usersWithCities[i].address = citiesWithId[j]
+    }
 }
 console.log(usersWithCities);
 
