@@ -84,3 +84,74 @@ function someDo(arr) {
 
 someDo(arr);
 
+// ---------------ДОП---------------
+//
+//     -   функція Приймає масив та число "i", та міняє місцями об`єкт який знаходиться в індексі "i" на "i+1"
+//   EXAMPLE:
+//   foo([9,8,0,4], 0) // ==> [ 8, 9, 0, 4 ]
+//   foo([9,8,0,4], 1) // ==> [ 9 ,0, 8, 4 ]
+//   foo([9,8,0,4], 2) // ==> [ 9, 8, 4, 0 ]
+//
+function replace(arr, index) {
+    let x = arr[index + 1];
+    arr[index + 1] = arr[index];
+    arr[index] = x;
+    return arr;
+}
+
+console.log(replace([1, 2, 3, 4], 2))
+
+// - Дано список імен.
+// let n1 = '    Harry       Potter      '
+// let n2 = '    Ron       Whisley      '
+// let n3 = '    Hermione       Granger      '
+// Написати функцію, яка приймає будь яке не валідне імя, та нормалізує його в наступнйи вигляд
+// let n1 = 'Harry Potter'
+// let n2 = 'Ron Whisley'
+// let n3 = 'Hermione Granger'
+
+let n1 = '    Harry       Potter       '
+let n2 = '    Ron       Whisley       '
+let n3 = '    Hermione        Granger      '
+
+function rename(string) {
+    let word = ``
+    // return console.log(string.replace(/\s+/g, ' ').trim());
+    string = string.split(` `);
+    console.log(string)
+    for (const stringElement of string) {
+        if (stringElement !== ``) {
+            word = word + ` ` + stringElement
+        }
+    }
+    return console.log(word)
+}
+
+rename(n1);
+rename(n2);
+rename(n3);
+
+
+//
+// - Сворити функцію яка буде переносити елементи з значенням 0 у кінець маисву. Зберігаючи при цьому порядок не нульових значень.
+// Двожина масиву від 2 до 100
+// EXAMPLE:
+// [1,0,6,0,3] => [1,6,3,0,0]
+// [0,1,2,3,4] => [1,2,3,4,0]
+// [0,0,1,0]   => [1,0,0,0]
+
+
+function zeroDell(arr) {
+    for (let i = 0; i < arr.length; i++) {
+        console.log(22)
+        if (arr[i] === 0) {
+            arr.splice(i,1);
+            arr.push(0);
+        }
+    }
+    console.log(arr);
+    return arr;
+}
+
+let lll = zeroDell([1, 0, 6, 0, 3]);
+console.log(lll);
