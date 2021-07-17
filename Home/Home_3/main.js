@@ -39,7 +39,7 @@ function minMax(...arg) {
 }
 
 let min = minMax(12, 14, 4, 11, 10, 1, 6);
-console.log(min)
+console.log(`min:` + min)
 
 // - створити функцію яка при створює блок з текстом. Текст задати через аргумент
 function div(someText) {
