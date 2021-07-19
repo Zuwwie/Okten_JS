@@ -116,9 +116,7 @@ let n3 = '    Hermione        Granger      '
 
 function rename(string) {
     let word = ``
-    // return console.log(string.replace(/\s+/g, ' ').trim());
     string = string.split(` `);
-    console.log(string)
     for (const stringElement of string) {
         if (stringElement !== ``) {
             word = word + ` ` + stringElement

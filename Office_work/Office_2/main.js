@@ -173,91 +173,93 @@ let citiesWithId = [
 
 let usersWithCities = [];
 for (let i = 0; i < usersWithId.length; i++) {
-    usersWithCities[i] = usersWithId[i]
     for (let j = 0; j < citiesWithId.length; j++) {
-        if(usersWithCities[i].id === citiesWithId[j].user_id)
-            usersWithCities[i].address = citiesWithId[j]
+        if (usersWithId[i].id === citiesWithId[j].user_id) {
+            usersWithCities[i] = Object.assign(usersWithId[i])
+            usersWithCities[i].address = Object.assign(citiesWithId[j])
+        }
     }
 }
 console.log(usersWithCities);
 
+
 // - Дан масив ['a', 'b', 'c']. Додайте йому в кінець елементи 1, 2, 3 за допомогою циклу.
-let arr = ['a', 'b', 'c'];
-for (let i = 1; i < 4; i++) {
-    arr.push(`${i}`)
-}
-console.log(arr);
+// let arr = ['a', 'b', 'c'];
+// for (let i = 1; i < 4; i++) {
+//     arr.push(`${i}`)
+// }
+// console.log(arr);
 
 // - Дан масив [1, 2, 3]. Зробіть з нього новий масив [3, 2, 1].
-arr = [1, 2, 3];
-arr.reverse();
-console.log(arr);
-// - Дан масив [1, 2, 3]. Додайте йому в кінець елементи 4, 5, 6.
-arr = [1, 2, 3];
-for (let i = 1; i < 4; i++) {
-    arr.push(i);
-}
-console.log(arr);
+// arr = [1, 2, 3];
+// arr.reverse();
+// console.log(arr);
+// // - Дан масив [1, 2, 3]. Додайте йому в кінець елементи 4, 5, 6.
+// arr = [1, 2, 3];
+// for (let i = 1; i < 4; i++) {
+//     arr.push(i);
+// }
+// console.log(arr);
 // - Дан масив [1, 2, 3]. Додайте йому в початок елементи 4, 5, 6.
-arr = [1, 2, 3]
-arr.unshift(4, 5, 6)
-console.log(arr);
+// arr = [1, 2, 3]
+// arr.unshift(4, 5, 6)
+// console.log(arr);
 // - Дан масив [1, 2, 3, 4, 5]. Перетворіть масив в [4, 5].
-console.log([1, 2, 3, 4, 5].slice(3))
+// console.log([1, 2, 3, 4, 5].slice(3))
 // - Дан масив [1, 2, 3, 4, 5]. Перетворіть масив в [1,2].
-console.log([1, 2, 3, 4, 5].slice(0, 2))
+// console.log([1, 2, 3, 4, 5].slice(0, 2))
 // - Дан масив [1, 2, 3, 4, 5]. Зробіть з нього масив [1, 2, 3, 'a', 'b', 'c'].
-arr = [1, 2, 3, 4, 5]
-arr.slice(0, 3,).push('a', 'b', 'c');
-console.log(arr);
+// arr = [1, 2, 3, 4, 5]
+// arr.slice(0, 3,).push('a', 'b', 'c');
+// console.log(arr);
 //
 // - Взяти масив з 10 чисел або створити його. Вивести в консоль тільки ті елементи, значення яких є парними.
-arr5 = [1, 2, 3, 4, 5, 6, 7, 8, 9, 0];
-for (let i = 0; i < arr5.length; i++) {
-    let arrr = arr5[i]
-    if (arrr % 2 === 0) {
-        console.log(arrr)
-    }
-}
+// arr5 = [1, 2, 3, 4, 5, 6, 7, 8, 9, 0];
+// for (let i = 0; i < arr5.length; i++) {
+//     let arrr = arr5[i]
+//     if (arrr % 2 === 0) {
+//         console.log(arrr)
+//     }
+// }
 // - Взяти масив з 10 чисел або створити його. Створити 2й порожній масив. За допомогою будь-якого циклу скопіювати
 // значення одного масиву в інший.
-arr5 = [1, 2, 3, 4, 5, 6, 7, 8, 9, 0];
-let arrNew = []
-for (let i = 0; i < arr5.length; i++) {
-    arrNew[i] = arr5[i];
-}
-console.log(arrNew);
+// arr5 = [1, 2, 3, 4, 5, 6, 7, 8, 9, 0];
+// let arrNew = []
+// for (let i = 0; i < arr5.length; i++) {
+//     arrNew[i] = arr5[i];
+// }
+// console.log(arrNew);
 
 // - Дано масив: [ 'a', 'b', 'c'] . За допомогою циклу for зібрати всі букви в слово.
-let word = ``;
-arr = ['a', 'b', 'c'];
-for (let i = 0; i < arr.length; i++) {
-    word += arr[i];
-}
-console.log(word);
+// let word = ``;
+// arr = ['a', 'b', 'c'];
+// for (let i = 0; i < arr.length; i++) {
+//     word += arr[i];
+// }
+// console.log(word);
 // - Дано масив: [ 'a', 'b', 'c'] . За допомогою циклу while зібрати всі букви в слово.
-word = ``;
-arr = ['a', 'b', 'c'];
-let i = 0;
-while (i < arr.length) {
-    word += arr[i];
-    i++
-}
-console.log(word)
+// word = ``;
+// arr = ['a', 'b', 'c'];
+// let i = 0;
+// while (i < arr.length) {
+//     word += arr[i];
+//     i++
+// }
+// console.log(word)
+// // - Дано масив: [ 'a', 'b', 'c'] . За допомогою циклу for of зібрати всі букви в слово.
+// word = ``;
+// arr = ['a', 'b', 'c'];
+// for (const string of arr) {
+//     word += string;
+// }
+// console.log(word);
 // - Дано масив: [ 'a', 'b', 'c'] . За допомогою циклу for of зібрати всі букви в слово.
-word = ``;
-arr = ['a', 'b', 'c'];
-for (const string of arr) {
-    word += string;
-}
-console.log(word);
-// - Дано масив: [ 'a', 'b', 'c'] . За допомогою циклу for of зібрати всі букви в слово.
-word = ``;
-arr = ['a', 'b', 'c'];
-for (const arrKey in arr) {
-    word += arr[arrKey];
-}
-console.log(word);
+// word = ``;
+// arr = ['a', 'b', 'c'];
+// for (const arrKey in arr) {
+//     word += arr[arrKey];
+// }
+// console.log(word);
 
 
 // - Дано список імен.
@@ -269,20 +271,19 @@ let n3 = '    Hermione       Granger      '
 // let n2 = 'Ron Whisley'
 // let n3 = 'Hermione Granger'
 
-function rename(string) {
-    let word = ``
-    // return console.log(string.replace(/\s+/g, ' ').trim());
-    string = string.split(` `);
-    console.log(string)
-    for (const stringElement of string) {
-        if (stringElement !== ``){
-            word = word + ` ` + stringElement
-        }
-    }
-    return console.log(word)
-}
-rename(n1);
-rename(n2);
-rename(n3);
-
-
+// function rename(string) {
+//     let word = ``
+//     // return console.log(string.replace(/\s+/g, ' ').trim());
+//     string = string.split(` `);
+//     console.log(string)
+//     for (const stringElement of string) {
+//         if (stringElement !== ``){
+//             word = word + ` ` + stringElement
+//         }
+//     }
+//     return console.log(word)
+// }
+// rename(n1);
+// rename(n2);
+// rename(n3);
+//
