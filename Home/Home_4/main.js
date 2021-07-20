@@ -110,6 +110,10 @@ class Contact {
                 city,
                 zipcode,
             }
+            this.address.geo = {
+                lat,
+                lng
+            }
         this.phone = phone
         this.website = website
         this.company =
@@ -125,37 +129,3 @@ const bio = new Contact(10, `Nazik`, `hav`, `Lodby@`, `vrubl`, `10`, `Lviv`,
     92998, 37, 22, 7709999999,`Romaguera.com`,`Romaguera`,
     `Multi-layered client-server neural-net`,`harness real-time e-markets`)
 console.log(bio)
-
-//
-//
-// -  Створити функцію конструктор / клас  який описує об'єкт тегу
-// Поля :
-//     -назва тегу ()
-// - опис його дій
-// - масив з атрибутами (2-3 атрибути максимум)
-// Кожен атрибут описати як окремий який буде містити
-// -назву атрибуту
-// -опис дії атрибуту
-// інформацію брати з htmlbook.ru
-//
-// Таким чином описати теги
-// -a
-// -div
-// -h1
-// -span
-// -input
-// -form
-// -option
-// -select
-// Приклад результуючого об'єкту
-// {
-//     titleOfTag: 'area',
-//         action: `Каждый элемент <area> определяет активные области изображения, которые являются ссылками...`,
-//     attrs: [
-//     {titleOfAttr: 'accesskey', actionOfAttr: 'Переход к области с помощью комбинации клавиш'},
-//     {/*some props and values*/},
-//     {/*...*/},
-//     {/*...*/},
-// ]
-//
-// }
