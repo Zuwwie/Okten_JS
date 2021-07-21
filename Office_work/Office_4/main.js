@@ -62,9 +62,7 @@ function Car(model, developer, year, maxSpeed, vEngine) {
         console.log(`New ${this.year}`)
     }
     this.addDriver = function (obj) {
-        console.log(obj)
         this.driver = obj
-        console.log(this)
     }
 
 }
@@ -119,9 +117,7 @@ class Carx {
     }
 
     addDriver(obj) {
-        console.log(obj)
         this.driver = obj
-        console.log(this)
     }
 }
 
