@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+<div class="lool"></div>
+    <script>
+        console.log(localStorage)
+        console.log(localStorage.getItem(`mail`))
+        let div = document.createElement('div');
+        div.innerHTML = `<h2>Mail - ${localStorage.getItem(`mail`)} <br> Pass - ${localStorage.getItem(`pass`)} </h2>`
+        document.getElementsByClassName(`lool`)[0].appendChild(div)
+    </script>
+</body>
+</html>
