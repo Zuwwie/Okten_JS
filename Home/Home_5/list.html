@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+<button id="dellAll">Dell ALLLLLLL</button>
+<a href="index.html">Повернутись назад</a>
+
+<div class="lool"></div>
+<a href="index.html" id="some" style="display: none">Повернутись назад</a>
+<script>
+    (function () {
+        let items = localStorage.getItem(`products`);
+        console.log(items)
+        items = JSON.parse(items);
+        console.log(items)
+        if (items.length >= 1) {document.getElementById(`some`).style = `display: block`}
+        for (const item of items) {
+            console.log(item)
+            let div = document.createElement(`div`)
+            div.innerHTML = `<h1>Name - ${item.name} </h1>  `
+            div.innerHTML += `<h3>Quantity - ${item.quantity} </h3>  `
+            div.innerHTML += `<p>Name - ${item.price} </p>  `
+            // div.innerHTML += `<img src="${item.img}" alt="Some photo"> `
+            div.innerHTML += `<button class="dellThis">DellOne</button>`
+            document.getElementsByClassName(`lool`)[0].appendChild(div)
+        }
+    }());
+    document.getElementById(`dellAll`).onclick = function (ev) {
+        ev.preventDefault();
+        let ok = confirm(`Realy dell all?`)
+        if (ok) {
+            localStorage.removeItem(`products`);
+            window.location.reload();
+        }
+
+    }
+    console.log(document.getElementsByClassName(`dellThis`))
+    let btns = document.getElementsByClassName(`dellThis`);
+    for (let i = 0; i < btns.length; i++) {
+        let btn = btns[i]
+        btn.onclick = function () {
+            console.log(btn)
+            console.log(i)
+            let items = localStorage.getItem(`products`);
+            items = JSON.parse(items);
+            for (let j = 0; j < items.length; j++) {
+                if (j === i) {
+                    console.log(222);
+                    items.splice(i, 1);
+                    arrProduct = JSON.stringify(items);
+                    localStorage.setItem(`products`, arrProduct);
+                    window.location.reload();
+                    break
+                }
+            }
+        }
+    }
+
+
+</script>
+</body>
+</html>
