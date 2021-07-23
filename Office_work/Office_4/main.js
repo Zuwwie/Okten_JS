@@ -42,6 +42,7 @@ function Car(model, developer, year, maxSpeed, vEngine) {
     this.year = year;
     this.maxSpeed = maxSpeed;
     this.vEngine = vEngine;
+
     this.drive = function () {
         console.log(`їдемо зі швидкістю ${this.maxSpeed} на годину`)
     }
