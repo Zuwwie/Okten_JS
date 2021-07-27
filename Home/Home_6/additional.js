@@ -101,8 +101,6 @@ fetch(`https://jsonplaceholder.typicode.com/users`)
                 } else {
                     posts.style.display = `none`
                     btn.innerText = `See Posts`
-
-
                 }
             }
 
