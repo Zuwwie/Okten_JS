@@ -45,13 +45,10 @@
     for (let i = 0; i < btns.length; i++) {
         let btn = btns[i]
         btn.onclick = function () {
-            console.log(btn)
-            console.log(i)
             let items = localStorage.getItem(`products`);
             items = JSON.parse(items);
             for (let j = 0; j < items.length; j++) {
                 if (j === i) {
-                    console.log(222);
                     items.splice(i, 1);
                     arrProduct = JSON.stringify(items);
                     localStorage.setItem(`products`, arrProduct);
