@@ -22,7 +22,7 @@ fetch(`https://jsonplaceholder.typicode.com/users`)
                     btn.innerText = `Close Post`
 
 
-                    fetch('https://jsonplaceholder.typicode.com/posts?userId=1')
+                    fetch(`https://jsonplaceholder.typicode.com/posts?userId=${ell.id}`)
                         .then((response) => response.json())
                         .then((value) => {
                             // console.log(value)
@@ -79,7 +79,7 @@ fetch(`https://jsonplaceholder.typicode.com/users`)
                                         comentsBtn.innerText = `Hide coments`
                                         // console.log(bodyOfComents.innerText)
 
-                                       if (bodyOfComents.innerText === ``) { fetch('https://jsonplaceholder.typicode.com/posts/1/comments')
+                                       if (bodyOfComents.innerText === ``) { fetch(`https://jsonplaceholder.typicode.com/posts/${ell.id}/comments`)
                                            .then((response) => response.json())
                                            .then((value) => {
                                                // console.log(value)
