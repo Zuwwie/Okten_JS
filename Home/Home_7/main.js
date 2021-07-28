@@ -30,6 +30,7 @@ function eat(haveAtFridge) {
     })
 }
 
+
 function learn(lesson) {
     return new Promise((resolve, reject) => {
         setTimeout(() => {
