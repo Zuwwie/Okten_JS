@@ -105,15 +105,17 @@ wakeUp()
         console.log(e)
         console.log(111)
         return goGo()
-    }).then((e) => {
-    console.log(e)
-    console.log(222)
-    return eat(`apple`)
-}).then((e) => {
-    console.log(e)
-    console.log(333)
-    return learn(8)
-})
+    })
+    .then((e) => {
+        console.log(e)
+        console.log(222)
+        return eat(`apple`)
+    })
+    .then((e) => {
+        console.log(e)
+        console.log(333)
+        return learn(8)
+    })
     .then((e) => {
         console.log(e)
         console.log(444)
