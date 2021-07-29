@@ -258,10 +258,10 @@ function sleep(gameAreDone) {
 }
 
 
-async function doSome () {
+async function doSome() {
     try {
-       await wakeUp();
-       await goGo()
+        await wakeUp();
+        await goGo()
         await eat(`apple`)
         await learn(8)
         await serial()
@@ -270,8 +270,7 @@ async function doSome () {
         await goToHome()
         await playGame()
         await sleep(`yes`)
-    }
-    catch (reason) {
+    } catch (reason) {
         console.log(`Omg`)
         console.warn(reason)
 
@@ -279,3 +278,10 @@ async function doSome () {
 }
 
 doSome();
+
+
+//// additional
+
+
+
+
