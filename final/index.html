@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        body{
+            margin: 0;
+            padding: 0;
+        }
+#users {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 24px;
+    justify-content: space-around;
+    box-sizing: border-box;
+    border: 2px solid red;
+    background-color: azure;
+}
+#users > div {
+    width: 40%;
+    border: 1px solid black;
+    margin: 10px;
+    padding: 10px;
+    background-color: lavender;
+}
+#users a {
+    background-color: blanchedalmond;
+    color: black;
+    border: none;
+    padding: 5px 10px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    cursor: pointer;
+    /*transform: translate(-50%, -50%);*/
+    left: 80%;
+}
+    </style>
+</head>
+<body>
+
+
+<div id="users"></div>
+
+
+
+<script src="main.js"></script>
+</body>
+</html>
